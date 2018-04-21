@@ -1,6 +1,7 @@
 package anko.edu.uabc.com.sharedpreferencesexample
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -25,9 +26,15 @@ class MainActivity : AppCompatActivity() {
 
             var p:SharedPreferences=getSharedPreferences(pref, Context.MODE_PRIVATE)
 
-            hello.text=p.getString("nombreA","Sin nombre")
+           //hello.text=p.getString("nombreA","Sin nombre")
 
-            Toast.makeText(applicationContext,p.getBoolean("bandera",true).toString(),Toast.LENGTH_SHORT).show()
+            //Toast.makeText(applicationContext,p.getBoolean("bandera",true).toString(),Toast.LENGTH_SHORT).show()
+                // var intentExample= Intent(this, Detalle::class.java)
+
+                    // startActivity(intentExample)
+
+            var intent:Intent=Intent(this,DetalleDos::class.java)
+            startActivity(intent)
 
         })
     }
